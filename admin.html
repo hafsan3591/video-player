@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SNAC ANIME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Admin <span>Panel</span></a>
+        <div class="header-btns">
+            <a href="index.html">View Website</a>
+        </div>
+    </header>
+
+    <div class="container" style="max-width: 700px;">
+        <div class="admin-card">
+            <h2 style="margin-bottom: 20px; color: var(--primary);">নতুন Anime যোগ করুন</h2>
+            
+            <div class="form-group">
+                <label>Anime Name (English)</label>
+                <input type="text" id="animeTitle" placeholder="e.g. Demon Slayer">
+            </div>
+            
+            <div class="form-group">
+                <label>Poster Image URL (ছবির লিংক)</label>
+                <input type="text" id="animePoster" placeholder="https://example.com/poster.jpg">
+            </div>
+
+            <div class="form-group">
+                <label>Video Link (MP4 Link or YouTube Embed Link)</label>
+                <input type="text" id="animeVideo" placeholder="https://example.com/video.mp4 OR https://youtube.com/embed/...">
+            </div>
+
+            <div class="form-group">
+                <label>Description (সংক্ষিপ্ত বিবরণ)</label>
+                <textarea id="animeDesc" rows="3" placeholder="Anime story description..."></textarea>
+            </div>
+
+            <button class="btn" onclick="addAnime()">Anime যোগ করুন</button>
+        </div>
+
+        <div class="admin-card">
+            <h2 style="margin-bottom: 15px; color: var(--primary);">বর্তমান Anime লিস্ট</h2>
+            <div class="admin-list" id="adminList">
+                <!-- Anime list loads here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
